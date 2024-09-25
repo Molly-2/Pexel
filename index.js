@@ -13,8 +13,8 @@ app.get('/pexels', async (req, res) => {
         const numResults = parseInt(req.query.results) || 8; // Default to 8 if not provided
 
         // Ensure the number of results is between 8 and 30
-        if (numResults < 8 || numResults > 30) {
-            return res.status(400).json({ error: 'Please request between 8 and 30 images.' });
+        if (numResults < 2 || numResults > 30) {
+            return res.status(400).json({ error: 'Please request between 2 and 30 images.' });
         }
 
         if (!query) {
